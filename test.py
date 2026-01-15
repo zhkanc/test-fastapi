@@ -19,3 +19,8 @@ async def get_model(model_name: ModelName):
         return {"model_name": model_name, "message": "ResNet is a network"}
     else:
         return {"model_name": model_name, "message": "It's a LeNet"}
+
+
+@app.post("/models/{model_name}")
+async def create_model(model_name: ModelName):
+    return {"model_name": model_name, "message": "Created model"}
