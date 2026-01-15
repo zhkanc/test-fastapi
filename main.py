@@ -50,3 +50,8 @@ async def delete_item(item_id: int):
     if not item:
         return {"error": "Item not found"}
     return {"deleted": item_id}
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run(app, host="0.0.0.0", port=8001)
